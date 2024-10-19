@@ -428,7 +428,7 @@ TextureImporter:
       name: TextureMap_15
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 64
         width: 16
         height: 16
@@ -449,8 +449,8 @@ TextureImporter:
       name: TextureMap_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
+        x: 16
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -470,8 +470,8 @@ TextureImporter:
       name: TextureMap_17
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
+        x: 32
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -483,6 +483,90 @@ TextureImporter:
       bones: []
       spriteID: b1ed5ffee01c82d45b9b59f1f60e4605
       internalID: -852087833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureMap_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0e391c34932b643b42262847b1370d
+      internalID: -1414150858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureMap_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312cf002c5df162488d715ab74ead2b2
+      internalID: -1802596548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureMap_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c49105490facd440a0911675b60a174
+      internalID: -424111984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextureMap_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798997cdea8b7574bb02e49d0ce6720e
+      internalID: -561910414
       vertices: []
       indices: 
       edges: []
@@ -508,7 +592,11 @@ TextureImporter:
       TextureMap_15: 1535797125
       TextureMap_16: 1326595137
       TextureMap_17: -852087833
+      TextureMap_18: -1414150858
+      TextureMap_19: -1802596548
       TextureMap_2: -924531524
+      TextureMap_20: -424111984
+      TextureMap_21: -561910414
       TextureMap_3: -422747612
       TextureMap_4: -736620786
       TextureMap_5: -1391701367

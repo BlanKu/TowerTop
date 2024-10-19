@@ -11,15 +11,9 @@ public class DoorScirpt : MonoBehaviour
         _sceneVariables = GameObject.Find("SceneVariables").GetComponent<SceneVariables>();
     }
 
-    
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision != null)
+        if (collision != null && collision.tag == "Player")
         {
             _sceneVariables.LevelCompete();
         }
