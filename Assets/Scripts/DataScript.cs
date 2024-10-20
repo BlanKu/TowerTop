@@ -48,5 +48,6 @@ public class DataScript : MonoBehaviour
     {
         public string sceneName;
         public int completedLevels;
+        public float masterVolume;
     }
 }

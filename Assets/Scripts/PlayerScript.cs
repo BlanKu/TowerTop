@@ -8,14 +8,21 @@ public class PlayerScript : MonoBehaviour
     public float playerSpeed;
     public float jumpSpeed;
     public bool playerCanMove;
+    public bool playerCanJump;
+    public bool playerCanGoLeft;
+    public bool playerCanGoRight;
 
     public BoxCollider2D _boxCollider2D;
+    public BoxCollider2D CheckLeft;
     public Rigidbody2D _rigidbody2D;
     public SpriteRenderer _spriteRenderer;
     public Animator _animator;
     public AudioSource _audioSource;
 
     public AudioClip[] _audioClip;
+
+    public SceneVariables _sceneVariables;
+    public LoadingScirpt _loadingScirpt;
 
     void Update()
     {
@@ -38,27 +45,51 @@ public class PlayerScript : MonoBehaviour
         {
             ResetValocityX();
         }
+
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            QuitLevel();
+        }
     }
 
     public void PlayerGoLeft()
     {
-        _rigidbody2D.velocity = new Vector2(-playerSpeed, _rigidbody2D.velocity.y);
-        _spriteRenderer.flipX = true;
-        _animator.Play("PlayerWalk");
+        if(playerCanGoLeft)
+        {
+            _rigidbody2D.velocity = new Vector2(-playerSpeed, _rigidbody2D.velocity.y);
+            _spriteRenderer.flipX = true;
+            _animator.Play("PlayerWalk");
+        }
+        else
+        {
+            _rigidbody2D.velocity = new Vector2(0, _rigidbody2D.velocity.y);
+        }
     }
 
     public void PlayerGoRight()
     {
-        _rigidbody2D.velocity = new Vector2(playerSpeed, _rigidbody2D.velocity.y);
-        _spriteRenderer.flipX = false;
-        _animator.Play("PlayerWalk");
+        if(playerCanGoRight)
+        {
+            _rigidbody2D.velocity = new Vector2(playerSpeed, _rigidbody2D.velocity.y);
+            _spriteRenderer.flipX = false;
+            _animator.Play("PlayerWalk");
+        }
+        else
+        {
+            _rigidbody2D.velocity = new Vector2(0, _rigidbody2D.velocity.y);
+        }
+
     }
 
     public void PlayerJump()
     {
-        _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
-        _audioSource.resource = _audioClip[0];
-        _audioSource.Play();
+        if (playerCanJump)
+        {
+            playerCanJump = false;
+            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
+            _audioSource.resource = _audioClip[0];
+            _audioSource.Play();
+        }
     }
 
     public void ResetValocityX()
@@ -75,5 +106,11 @@ public class PlayerScript : MonoBehaviour
         _animator.Play("PlayerGameOver");
         _audioSource.resource = _audioClip[1];
         _audioSource.Play();
+    }
+
+    public void QuitLevel()
+    {
+        _sceneVariables.nextLevelName = "LevelMenu";
+        StartCoroutine(_loadingScirpt.Loading());
     }
 }

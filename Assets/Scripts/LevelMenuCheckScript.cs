@@ -7,13 +7,22 @@ using UnityEngine;
 public class LevelMenuCheckScript : MonoBehaviour
 {
     public DataScript dataScript;
-    public int condition;
+    public ButoonScript butoonScript;
     void Start()
     {
         Type type = dataScript.player.GetType();
         FieldInfo field = type.GetField("completedLevels");
 
-        if((int)field.GetValue(dataScript.player) >= condition)
+        
+        if ((int)field.GetValue(dataScript.player) >= butoonScript.condition+1 && gameObject.name == "LevelCompleteCheck")
+        {
+            gameObject.SetActive(true);
+        }
+        else if((int)field.GetValue(dataScript.player) > butoonScript.condition-1 && gameObject.name == "LevelLock")
+        {
+            gameObject.SetActive(false);
+        }
+        else if ((int)field.GetValue(dataScript.player) <= butoonScript.condition-1 && gameObject.name == "LevelLock")
         {
             gameObject.SetActive(true);
         }
@@ -21,6 +30,7 @@ public class LevelMenuCheckScript : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        
 
     }
 }
