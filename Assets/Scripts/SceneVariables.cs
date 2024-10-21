@@ -21,18 +21,16 @@ public class SceneVariables : MonoBehaviour
     Tilemap Traps;
     SpriteRenderer Door;
     SpriteRenderer Player;
-    Image BackgroundLevelName;
 
     PlayerScript PlayerScript;
     public DataScript DataScript;
     public LoadingScirpt LoadingScirpt;
 
-    public AudioSource[] AudioSources;
-
 
     void Start()
     {
         DataScript.LoadData();
+        AudioListener.volume = DataScript.player.masterVolume;
 
         if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Settings" && SceneManager.GetActiveScene().name != "LevelMenu")
         {
@@ -42,7 +40,6 @@ public class SceneVariables : MonoBehaviour
             Traps = GameObject.Find("Traps").GetComponent<Tilemap>();
             Door = GameObject.Find("Door").GetComponent<SpriteRenderer>();
             Player = GameObject.Find("Player").GetComponent<SpriteRenderer>();
-            BackgroundLevelName = GameObject.Find("BackgroundLevelName").GetComponent<Image>();
 
             PlayerScript = GameObject.Find("Player").GetComponent<PlayerScript>();
 
@@ -53,20 +50,9 @@ public class SceneVariables : MonoBehaviour
             //Map.color = color;
             Traps.color = color;
             Door.color = color;
-            Player.color = color;
-            BackgroundLevelName.color = color;
+            Player.color = color;        
         }
 
-        for (int i = 0; i < AudioSources.Length; i++)
-        {
-            AudioSources[i].volume = DataScript.player.masterVolume;
-        }
-    }
-
-    
-    void Update()
-    {
-        
     }
 
     public void LevelCompete()

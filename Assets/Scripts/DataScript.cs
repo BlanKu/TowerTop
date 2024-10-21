@@ -5,6 +5,7 @@ using UnityEngine;
 public class DataScript : MonoBehaviour
 {
     public Player player =  new Player();
+    public string gameVersion;
 
     private void Start()
     {

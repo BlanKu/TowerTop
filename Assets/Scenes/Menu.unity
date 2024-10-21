@@ -170,6 +170,7 @@ MonoBehaviour:
     sceneName: 
     completedLevels: 0
     masterVolume: 0
+  gameVersion: 
 --- !u!114 &6100192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,8 +302,6 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   DataScript: {fileID: 6100191}
   LoadingScirpt: {fileID: 6100192}
-  AudioSources:
-  - {fileID: 6100193}
 --- !u!1 &38321256
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,7 +898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v0.02a
+  m_text: v0.03a
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 97e5016c753ec81468cc1a607272a4f5, type: 2}
   m_sharedMaterial: {fileID: -8543086267579183499, guid: 97e5016c753ec81468cc1a607272a4f5, type: 2}
