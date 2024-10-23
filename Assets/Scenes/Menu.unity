@@ -852,6 +852,7 @@ GameObject:
   - component: {fileID: 1066053624}
   - component: {fileID: 1066053626}
   - component: {fileID: 1066053625}
+  - component: {fileID: 1066053627}
   m_Layer: 5
   m_Name: GameVersionText
   m_TagString: Untagged
@@ -898,7 +899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v0.04a
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 97e5016c753ec81468cc1a607272a4f5, type: 2}
   m_sharedMaterial: {fileID: -8543086267579183499, guid: 97e5016c753ec81468cc1a607272a4f5, type: 2}
@@ -977,6 +978,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066053623}
   m_CullTransparentMesh: 1
+--- !u!114 &1066053627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066053623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1df74f8d7b09294c8db8b05852b0a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _VersionText: {fileID: 1066053625}
 --- !u!1 &1306668676
 GameObject:
   m_ObjectHideFlags: 0

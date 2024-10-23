@@ -54,7 +54,7 @@ public class PlayerScript : MonoBehaviour
 
     public void PlayerGoLeft()
     {
-        if(playerCanGoLeft)
+        if(playerCanGoLeft && playerCanMove)
         {
             _rigidbody2D.velocity = new Vector2(-playerSpeed, _rigidbody2D.velocity.y);
             _spriteRenderer.flipX = true;
@@ -68,7 +68,7 @@ public class PlayerScript : MonoBehaviour
 
     public void PlayerGoRight()
     {
-        if(playerCanGoRight)
+        if(playerCanGoRight && playerCanMove)
         {
             _rigidbody2D.velocity = new Vector2(playerSpeed, _rigidbody2D.velocity.y);
             _spriteRenderer.flipX = false;
@@ -83,7 +83,7 @@ public class PlayerScript : MonoBehaviour
 
     public void PlayerJump()
     {
-        if (playerCanJump)
+        if (playerCanJump && playerCanMove)
         {
             playerCanJump = false;
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
