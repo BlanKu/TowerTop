@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class MapBordersScript : MonoBehaviour
 {
-    public SceneVariables _sceneVariables;
+    SceneVariables _sceneVariables;
+
+    private void Start()
+    {
+        _sceneVariables = GameObject.Find("SceneVariables").GetComponent<SceneVariables>();
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {

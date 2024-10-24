@@ -21,8 +21,14 @@ public class PlayerScript : MonoBehaviour
 
     public AudioClip[] _audioClip;
 
-    public SceneVariables _sceneVariables;
-    public LoadingScirpt _loadingScirpt;
+    private SceneVariables _sceneVariables;
+    private LoadingScirpt _loadingScirpt;
+
+    private void Start()
+    {
+        _sceneVariables = GameObject.Find("SceneVariables").GetComponent<SceneVariables>();
+        _loadingScirpt = GameObject.Find("SceneVariables").GetComponent<LoadingScirpt>();
+    }
 
     void Update()
     {

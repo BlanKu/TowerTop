@@ -14,6 +14,7 @@ public class PortalScript : MonoBehaviour
         _Player = GameObject.FindGameObjectWithTag("Player");
         _PlayerAnimator = _Player.GetComponent<Animator>();
         _PlayerScript = _Player.GetComponent<PlayerScript>();
+        _Destination.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

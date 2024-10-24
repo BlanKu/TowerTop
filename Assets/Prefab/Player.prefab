@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 4587430273541545859}
   - component: {fileID: 790744115035948716}
   - component: {fileID: 3834270130601045116}
+  - component: {fileID: 34561169932681755}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -503,8 +504,21 @@ MonoBehaviour:
   _audioClip:
   - {fileID: 8300000, guid: 5531e73b8a492cc4a96e771ba6d5210b, type: 3}
   - {fileID: 8300000, guid: f9bbfa7b8dba50740ad14818d695dc4b, type: 3}
-  _sceneVariables: {fileID: 0}
-  _loadingScirpt: {fileID: 0}
+--- !u!114 &34561169932681755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5258576412634760499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d11a6a9f60b0ab468cc29d63709fa62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapColor: 0
+  objectsColor: 1
+  cameraColorBackground: 0
 --- !u!1 &7273191941172592174
 GameObject:
   m_ObjectHideFlags: 0

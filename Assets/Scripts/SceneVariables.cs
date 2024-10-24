@@ -10,15 +10,11 @@ public class SceneVariables : MonoBehaviour
 {
     public string levelName;
     public string nextLevelName;
-    public int colorDivider;
     public int valueAfterCompleteLevel;
-    public Color color;
-    Color colorRGB;
+    public Color mapColor = new Color(47, 47, 47, 255);
+    public Color objectsColors = new Color(255, 255, 255, 255);
+    public Color cameraBackgroundColor = new Color(18, 18, 18, 255);
 
-    TextMeshProUGUI LevelName;
-    Camera Camera;
-    Tilemap Map;
-    Tilemap Traps;
     SpriteRenderer Door;
     SpriteRenderer Player;
 
@@ -32,27 +28,12 @@ public class SceneVariables : MonoBehaviour
         DataScript.LoadData();
         AudioListener.volume = DataScript.player.masterVolume;
 
-        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Settings" && SceneManager.GetActiveScene().name != "LevelMenu")
-        {
-            LevelName = GameObject.Find("LevelName").GetComponent<TextMeshProUGUI>();
-            //Camera = GameObject.Find("Main Camera").GetComponent<Camera>();
-            //Map = GameObject.Find("Map").GetComponent<Tilemap>();
-            Traps = GameObject.Find("Traps").GetComponent<Tilemap>();
-            Door = GameObject.Find("Door").GetComponent<SpriteRenderer>();
-            Player = GameObject.Find("Player").GetComponent<SpriteRenderer>();
+        GameObject.Find("LevelName").GetComponent<TextMeshProUGUI>().text = levelName;
 
-            PlayerScript = GameObject.Find("Player").GetComponent<PlayerScript>();
+        Door = GameObject.Find("Door").GetComponent<SpriteRenderer>();
+        Player = GameObject.Find("Player").GetComponent<SpriteRenderer>();
 
-            colorRGB = new Color(color.r / colorDivider, color.g / colorDivider, color.b / colorDivider, color.a);
-
-            LevelName.text = levelName;
-            //Camera.backgroundColor = colorRGB;
-            //Map.color = color;
-            Traps.color = color;
-            Door.color = color;
-            Player.color = color;        
-        }
-
+        PlayerScript = GameObject.Find("Player").GetComponent<PlayerScript>();
     }
 
     public void LevelCompete()

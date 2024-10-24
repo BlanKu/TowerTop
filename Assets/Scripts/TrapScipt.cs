@@ -5,7 +5,12 @@ using UnityEngine;
 
 public class TrapScipt : MonoBehaviour
 {
-    public SceneVariables scenevariables;
+    private SceneVariables scenevariables;
+
+    private void Start()
+    {
+        scenevariables = GameObject.Find("SceneVariables").GetComponent<SceneVariables>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag== "Player")
