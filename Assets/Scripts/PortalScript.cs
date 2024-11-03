@@ -30,7 +30,7 @@ public class PortalScript : MonoBehaviour
         _PlayerScript.playerCanMove = false;
         _PlayerAnimator.Play("PlayerTeleport");
         yield return new WaitForSeconds(0.5f);
-        _Player.transform.position = _Destination.transform.TransformPoint(new Vector3(0,0,0));
+        _Player.transform.position = _Destination.transform.TransformPoint(new Vector3(0,0,-1));
         _PlayerAnimator.Play("PlayerTeleportReverse");
         yield return new WaitForSeconds(0.5f);
         _PlayerScript.playerCanMove = true;
